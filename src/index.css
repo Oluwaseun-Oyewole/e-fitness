@@ -2,12 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 :root {
   line-height: 1.5;
   font-weight: 400;
 }
 
+ul {
+  list-style: none;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
+}
+.container {
+  @apply px-5 md:px-0 md:max-w-[1300px] mx-auto;
+}
+
+.circle {
+  background-color: green;
+  width: 500px !important;
 }

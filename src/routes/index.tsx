@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom"
-import ErrorPage from "../components/errors"
+import ErrorPage from "../components/custom/errors"
 import { Home, Packages } from "./lazy"
 import { Routes } from "./routes"
 

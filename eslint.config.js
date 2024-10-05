@@ -6,7 +6,14 @@ import globals from "globals"
 import tseslint from "typescript-eslint"
 
 export default tseslint.config(
-  { ignores: ["dist", "commitlint.config.js", "tailwind.config.js"] },
+  {
+    ignores: [
+      "dist",
+      "commitlint.config.js",
+      "tailwind.config.js",
+      "vite.config.ts",
+    ],
+  },
   js.configs.recommended,
   prettierRecommended,
   {

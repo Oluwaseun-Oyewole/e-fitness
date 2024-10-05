@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import Wrapper from "../../components/custom/wrapper"
 
 export default function Home() {
   const routeVariants = {
@@ -14,13 +15,15 @@ export default function Home() {
     },
   }
   return (
-    <motion.div
-      variants={routeVariants}
-      initial="initial"
-      animate="final"
-      className="home component"
-    >
-      <h1> Home Component </h1>
-    </motion.div>
+    <Wrapper>
+      <motion.section
+        variants={routeVariants}
+        initial="initial"
+        animate="final"
+        className="container"
+      >
+        <h1>Home</h1>
+      </motion.section>
+    </Wrapper>
   )
 }
