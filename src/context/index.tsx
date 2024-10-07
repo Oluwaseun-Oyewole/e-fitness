@@ -7,6 +7,8 @@ interface ContextType {
   toggle: () => void
   handleScroll: (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void
   scrollToTop: VoidFunction
+  mobileMenu: boolean
+  toggleMobileMenu: VoidFunction
 }
 
 export const GlobalContext = createContext<ContextType | undefined>(undefined)
@@ -14,6 +16,11 @@ export const GlobalContext = createContext<ContextType | undefined>(undefined)
 export const GlobalContextProvider = ({ children }: PropsWithChildren) => {
   const [globalColor, setGlobalColor] = useState<string>("bg-gray-50")
   const [isOpen, setIsOpen] = useState(false)
+  const [mobileMenu, setMobileMenu] = useState(false)
+
+  const toggleMobileMenu = () => {
+    return setMobileMenu(!mobileMenu)
+  }
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault()
@@ -50,6 +57,8 @@ export const GlobalContextProvider = ({ children }: PropsWithChildren) => {
         toggle,
         handleScroll,
         scrollToTop,
+        toggleMobileMenu,
+        mobileMenu,
       }}
     >
       {children}

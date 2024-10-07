@@ -56,7 +56,7 @@ const Sidebar = () => {
           animate="visible"
           variants={variants}
           exit="exit"
-          className={`fixed top-0 left-0 right-0 w-5/5 h-screen overflow-hidden backdrop-blur-sm z-50`}
+          className={`fixed top-0 left-0 right-0 w-5/5 h-screen overflow-hidden backdrop-blur-sm z-50 container`}
         >
           <div className="flex items-end justify-end w-full p-16">
             <Hamburger />
@@ -69,7 +69,7 @@ const Sidebar = () => {
             initial="hidden"
             animate={isInView ? "show" : "hidden"}
             variants={containerVariant}
-            className="p-20 flex flex-col items-start justify-center gap-5 text-center text-[rgba(0,0,0,0.8)]  font-extrabold text-4xl"
+            className="pt-20 flex flex-col items-start justify-center gap-5 text-center text-[rgba(0,0,0,0.8)]  font-extrabold text-4xl"
           >
             <motion.li
               variants={itemVariant}

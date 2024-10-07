@@ -1,7 +1,6 @@
 import { motion } from "framer-motion"
 import Wrapper from "../../components/custom/wrapper"
 import Hero from "../../components/ui/hero"
-import Packages from "../../components/ui/packages"
 
 export default function Home() {
   const routeVariants = {
@@ -26,7 +25,6 @@ export default function Home() {
         className="container"
       >
         <Hero />
-        <Packages />
       </motion.section>
     </Wrapper>
   )

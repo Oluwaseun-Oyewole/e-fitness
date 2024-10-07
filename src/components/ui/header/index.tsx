@@ -1,17 +1,20 @@
+import { GiHamburgerMenu } from "react-icons/gi"
+import { IoMdClose } from "react-icons/io"
 import { IoSearch } from "react-icons/io5"
 import { NavLink } from "react-router-dom"
 import cart from "../../../assets/svg/Cart.svg"
 import logo from "../../../assets/svg/Logo.svg"
 import { useGlobalContext } from "../../../hooks"
 import Hamburger from "../../custom/hambugger"
+import { MobileNavigation } from "../../custom/mobile"
 import Sidebar from "../../custom/sidebar"
 
 const Header = () => {
-  const { handleScroll } = useGlobalContext()
+  const { handleScroll, mobileMenu, toggleMobileMenu } = useGlobalContext()
   return (
-    <header className="container sticky top-0 left-0 z-40">
+    <header className="sticky top-0 left-0 z-40">
       <Sidebar />
-      <nav className="flex items-center justify-between font-bold h-[12vh] backdrop-blur-sm">
+      <nav className="container flex items-center justify-between font-bold h-[12vh] backdrop-blur-sm">
         <ul className="md:flex items-center gap-5 hidden">
           <li>
             <a href="/">HOME</a>
@@ -40,11 +43,14 @@ const Header = () => {
           </li>
           <Hamburger />
         </ul>
-        <ul className="block md:hidden">
-          <li>
-            <Hamburger />
-          </li>
-        </ul>
+        <div className="block md:hidden">
+          {!mobileMenu ? (
+            <GiHamburgerMenu size={25} onClick={toggleMobileMenu} />
+          ) : (
+            <IoMdClose size={25} onClick={toggleMobileMenu} />
+          )}
+        </div>
+        <MobileNavigation />
       </nav>
     </header>
   )

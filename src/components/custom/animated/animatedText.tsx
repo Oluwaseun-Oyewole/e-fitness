@@ -5,8 +5,8 @@ const AnimatedSVGPath = ({ fill }: { fill: string }) => {
     <>
       <motion.svg
         // width="253"
-        className="w-[150px] md:w-[253px] h-[250px] md:h-[300px] lg:h-[574px] xl:h-[724px]"
-        height="624"
+        className="w-[150px] md:w-[253px] h-[250px] md:h-[300px] lg:h-[574px] xl:h-[624px]"
+        // height="624"
         viewBox="0 0 253 724"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

@@ -48,11 +48,11 @@ const Hero = () => {
     //   setCurrentIndex((prevIndex) =>
     //     prevIndex === models.length - 1 ? 0 : prevIndex + 1
     //   )
-    // }, 8000)
+    // }, 10000)
     // return () => clearInterval(interval)
   }, [])
   return (
-    <section className="max-w-[95%] mx-auto min-h-[88vh] w-full">
+    <section className="max-w-[95%] mx-auto xl:min-h-[88vh] w-full">
       <div className="relative w-full overflow-hidden">
         <AnimatePresence mode="wait">
           <motion.ul
@@ -68,9 +68,9 @@ const Hero = () => {
               return (
                 <li
                   key={index}
-                  className={`relative flex-none w-full flex flex-col lg:flex-row items-center justify-center`}
+                  className={`relative flex-none w-full flex flex-col lg:flex-row lg:items-center lg:justify-center`}
                 >
-                  <div className="basis-[30%] order-3 lg:order-1">
+                  <div className=" md:w-4/5 xl:basis-[40%] order-3 lg:order-1 py-6 lg:py-0">
                     <motion.div
                       initial={{ y: "-50%", opacity: 0 }}
                       whileInView={{
@@ -111,18 +111,18 @@ const Hero = () => {
                         amount: "some",
                         once: false,
                       }}
-                      className="font-medium pt-5"
+                      className="font-medium pt-5 text-sm leading-6 md:text-base lg:text-lg xl:text-xl"
                     >
                       {model.details}
                     </motion.p>
-                    <div className="pt-10 pb-6">
+                    <div className="pt-4 lg:pt-14 pb-2 md:pb-6">
                       <CustomButton
                         children="GET STARTED"
                         buttonType="custom"
                         fill={model.color}
                       />
                     </div>
-                    <div className="my-6 flex items-center font-bold gap-5 justify-between w-[55%]">
+                    <div className="my-4 flex items-center font-bold justify-between w-[45%]">
                       <button onClick={prev}>
                         <img
                           src={left}
@@ -142,12 +142,12 @@ const Hero = () => {
                       </button>
                     </div>
 
-                    <div className="grid grid-cols-4 w-2/5 items-center">
+                    <div className="grid grid-cols-4 gap-4 items-center absolute bottom-4 md:bottom-8 right-0 lg:left-0 md:w-1/5">
                       {socialsImages?.map((src, index) => {
                         return (
                           <motion.img
                             src={src}
-                            className="w-[22px] cursor-pointer"
+                            className="w-[18px] cursor-pointer"
                             key={index}
                             whileHover={{ scale: 1.3 }}
                           />
@@ -156,15 +156,15 @@ const Hero = () => {
                     </div>
                   </div>
 
-                  <div className="h-full relative lg:basis-[55%] order-2 lg:order-3">
+                  <div className="h-full relative order-1 lg:order-2">
                     <img
                       src={model.modelImage}
                       alt={model.title}
-                      className="w-full h-[70vh] lg:h-[88vh] object-cover"
+                      className="w-full h-[50vh] md:h-[70vh] xl:h-[88vh] object-cover"
                     />
                   </div>
 
-                  <div className="lg:w-[250px] basis-[10%] order-1 lg:order-3">
+                  <div className="lg:w-[250px] basis-[10%] hidden xl:block order-3">
                     <AnimatedSVGPath fill={model.fill} />
                   </div>
                 </li>
