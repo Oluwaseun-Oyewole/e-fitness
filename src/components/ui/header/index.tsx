@@ -2,22 +2,15 @@ import { IoSearch } from "react-icons/io5"
 import { NavLink } from "react-router-dom"
 import cart from "../../../assets/svg/Cart.svg"
 import logo from "../../../assets/svg/Logo.svg"
+import { useGlobalContext } from "../../../hooks"
 import Hamburger from "../../custom/hambugger"
+import Sidebar from "../../custom/sidebar"
 
 const Header = () => {
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    e.preventDefault()
-    const href = e.currentTarget.href
-    const targetId = href.replace(/.*#/, "")
-    const elem = document.getElementById(targetId)
-    elem?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    })
-  }
-
+  const { handleScroll } = useGlobalContext()
   return (
-    <header className="container sticky top-0 left-0 z-50">
+    <header className="container sticky top-0 left-0 z-40">
+      <Sidebar />
       <nav className="flex items-center justify-between font-bold h-[12vh] backdrop-blur-sm">
         <ul className="md:flex items-center gap-5 hidden">
           <li>

@@ -1,6 +1,6 @@
 // src/components/Hamburger.tsx
 import { motion } from "framer-motion"
-import { useState } from "react"
+import { useGlobalContext } from "../../../hooks"
 
 const lineVariants = {
   top: {
@@ -18,14 +18,10 @@ const lineVariants = {
 }
 
 const Hamburger = () => {
-  const [isOpen, setIsOpen] = useState(false)
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen)
-  }
+  const { isOpen, toggle } = useGlobalContext()
 
   return (
-    <button onClick={toggleMenu} className="hamburger-button">
+    <button onClick={toggle} className="">
       <svg
         width="30"
         height="30"
