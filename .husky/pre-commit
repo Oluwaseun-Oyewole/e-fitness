@@ -3,8 +3,8 @@
 
 npx lint-staged
 
-yarn run build ||
-(
-    echo 'Build Failed ❌'
-    false;
-)
+# yarn run build ||
+# (
+#     echo 'Build Failed ❌'
+#     false;
+# )

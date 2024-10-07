@@ -27,7 +27,7 @@ const Hero = () => {
       return changeGlobalColor("bg-white")
     }
     changeGlobalColor("bg-gray-50")
-  }, [currentIndex])
+  }, [currentIndex, changeGlobalColor])
 
   const ref = useRef<HTMLUListElement>(null)
   const isInView = useInView(ref, {
