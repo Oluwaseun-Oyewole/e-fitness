@@ -15,7 +15,7 @@ export const MobileNavigation = () => {
         damping: 10,
       },
     },
-    exit: { opacity: [1, 0.8, 0.5, 0.3, 0] },
+    exit: { opacity: [1, 0.8, 0.5, 0.5, 0] },
   }
 
   const container = {
