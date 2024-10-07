@@ -30,7 +30,7 @@ const Header = () => {
             </a>
           </li>
         </ul>
-        <img src={logo} alt="logo" className="w-[75px] md:w-fit" />
+        <img src={logo} alt="logo" className="w-[74px] md:w-fit" />
         <ul className="md:flex items-center gap-8 hidden">
           <li>
             <NavLink to="">Sign In</NavLink>
