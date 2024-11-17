@@ -1,5 +1,6 @@
 import { motion } from "framer-motion"
 import Wrapper from "../../components/custom/wrapper"
+import Features from "../../components/ui/features"
 import Hero from "../../components/ui/hero"
 
 export default function Home() {
@@ -25,6 +26,7 @@ export default function Home() {
         className="container"
       >
         <Hero />
+        <Features />
       </motion.section>
     </Wrapper>
   )

@@ -70,7 +70,7 @@ const Hero = () => {
                   key={index}
                   className={`relative flex-none w-full flex flex-col lg:flex-row lg:items-center lg:justify-center`}
                 >
-                  <div className=" md:w-4/5 xl:basis-[40%] order-3 lg:order-1 py-6 lg:py-0">
+                  <div className=" md:w-4/5 xl:basis-[45%] order-3 lg:order-1 py-6 lg:py-0">
                     <motion.div
                       initial={{ y: "-50%", opacity: 0 }}
                       whileInView={{
@@ -111,7 +111,7 @@ const Hero = () => {
                         amount: "some",
                         once: false,
                       }}
-                      className="font-medium pt-5 text-sm leading-6 md:text-base lg:text-lg xl:text-xl"
+                      className="font-medium pt-5 text-sm leading-6 md:text-base lg:text-lg"
                     >
                       {model.details}
                     </motion.p>
